@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Course Portal</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Design Grid -->
+    <div class="background-grid">
+        <div class="glow-orb orb-violet"></div>
+        <div class="glow-orb orb-teal"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="portal-container">
+        
+        <!-- ==========================================
+             PAGE 1: LOGIN VIEW
+             ========================================== -->
+        <section id="view-login" class="portal-card active">
+            <div class="card-header">
+                <div class="portal-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Course Portal</span>
+                </div>
+                <h2>User Login</h2>
+                <p>Sign in to manage your student profile and enrollments</p>
+            </div>
+
+            <form id="login-form" novalidate>
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="login-email"><i class="fa-solid fa-envelope"></i> Email</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="login-email" placeholder="e.g. sahal@gmail.com" required>
+                    </div>
+                    <span class="error-msg" id="err-login-email"></span>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="login-password"><i class="fa-solid fa-lock"></i> Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="login-password" placeholder="Enter password" required>
+                    </div>
+                    <span class="error-msg" id="err-login-password"></span>
+                </div>
+
+                <!-- Submit Action -->
+                <button type="submit" class="btn btn-primary" id="btn-login">
+                    <span class="btn-text">Login</span>
+                    <span class="btn-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+                </button>
+            </form>
+
+            <div class="card-footer">
+                <p>Don't have an account?</p>
+                <a href="#register" class="footer-link">[ Register Here ]</a>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PAGE 2: REGISTRATION VIEW
+             ========================================== -->
+        <section id="view-register" class="portal-card">
+            <div class="card-header">
+                <div class="portal-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Course Portal</span>
+                </div>
+                <h2>Create Account</h2>
+                <p>Register as a student to join our platform</p>
+            </div>
+
+            <form id="register-form" novalidate>
+                <div class="form-grid">
+                    <!-- Full Name Field -->
+                    <div class="form-group">
+                        <label for="reg-name"><i class="fa-solid fa-user"></i> Full Name</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="reg-name" placeholder="e.g. Sahal" required>
+                        </div>
+                        <span class="error-msg" id="err-reg-name"></span>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="reg-email"><i class="fa-solid fa-envelope"></i> Email</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="reg-email" placeholder="e.g. sahal@gmail.com" required>
+                        </div>
+                        <span class="error-msg" id="err-reg-email"></span>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <label for="reg-password"><i class="fa-solid fa-lock"></i> Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="reg-password" placeholder="Min. 8 characters" required>
+                        </div>
+                        <span class="error-msg" id="err-reg-password"></span>
+                    </div>
+
+                    <!-- City Field -->
+                    <div class="form-group">
+                        <label for="reg-city"><i class="fa-solid fa-map-location-dot"></i> City</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="reg-city" placeholder="e.g. Kozhikode" required>
+                        </div>
+                        <span class="error-msg" id="err-reg-city"></span>
+                    </div>
+
+                    <!-- Age Field -->
+                    <div class="form-group">
+                        <label for="reg-age"><i class="fa-solid fa-calendar-days"></i> Age</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="reg-age" placeholder="e.g. 22" min="1" max="120" required>
+                        </div>
+                        <span class="error-msg" id="err-reg-age"></span>
+                    </div>
+
+                    <!-- Interested Course Selection -->
+                    <div class="form-group">
+                        <label for="reg-course"><i class="fa-solid fa-graduation-cap"></i> Interested Course</label>
+                        <div class="input-wrapper">
+                            <select id="reg-course" required>
+                                <option value="" disabled selected>Select Course</option>
+                                <option value="Python (6 Weeks)">Python (6 Weeks)</option>
+                                <option value="SQL (4 Weeks)">SQL (4 Weeks)</option>
+                                <option value="Power BI (4 Weeks)">Power BI (4 Weeks)</option>
+                                <option value="Azure Cloud (8 Weeks)">Azure Cloud (8 Weeks)</option>
+                                <option value="Data Science (12 Weeks)">Data Science (12 Weeks)</option>
+                            </select>
+                        </div>
+                        <span class="error-msg" id="err-reg-course"></span>
+                    </div>
+
+                    <!-- Learning Goal Field -->
+                    <div class="form-group col-span-2">
+                        <label for="reg-goal"><i class="fa-solid fa-bullseye"></i> Learning Goal</label>
+                        <div class="input-wrapper">
+                            <textarea id="reg-goal" placeholder="e.g. Become a Cloud Data Engineer..." rows="2"></textarea>
+                        </div>
+                        <span class="error-msg" id="err-reg-goal"></span>
+                    </div>
+                </div>
+
+                <!-- Submit Action -->
+                <button type="submit" class="btn btn-primary" id="btn-register">
+                    <span class="btn-text">Register</span>
+                    <span class="btn-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+                </button>
+            </form>
+
+            <div class="card-footer">
+                <p>Already have an account?</p>
+                <a href="#login" class="footer-link">[ Login Here ]</a>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PAGE 3: STUDENT DASHBOARD VIEW
+             ========================================== -->
+        <section id="view-dashboard" class="portal-card dashboard-card">
+            <!-- Header Welcome Banner -->
+            <div class="dashboard-header">
+                <div class="header-left">
+                    <div class="user-avatar" id="dash-avatar"></div>
+                    <div class="welcome-text">
+                        <h1 id="dash-welcome"></h1>
+                        <span class="student-status"><span class="pulse-dot"></span> Active Student Account</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="kpi-users-badge">
+                        <i class="fa-solid fa-users"></i>
+                        <span id="dash-total-users">Total Students: ...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile & Courses Content Section -->
+            <div class="profile-grid">
+                <!-- Tab A: Profile Details -->
+                <div class="profile-card-inner">
+                    <h3><i class="fa-solid fa-id-card text-indigo"></i> Your Profile</h3>
+                    
+                    <div class="profile-list">
+                        <div class="profile-item">
+                            <span class="label"><i class="fa-solid fa-signature"></i> Name:</span>
+                            <span class="value" id="prof-name"></span>
+                        </div>
+                        <div class="profile-item">
+                            <span class="label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                            <span class="value" id="prof-email"></span>
+                        </div>
+                        <div class="profile-item">
+                            <span class="label"><i class="fa-solid fa-location-dot"></i> City:</span>
+                            <span class="value" id="prof-city"></span>
+                        </div>
+                        <div class="profile-item">
+                            <span class="label"><i class="fa-solid fa-circle-info"></i> Age:</span>
+                            <span class="value" id="prof-age"></span>
+                        </div>
+                        <div class="profile-item col-span-2-list">
+                            <span class="label"><i class="fa-solid fa-bullseye"></i> Learning Goal:</span>
+                            <span class="value text-goal" id="prof-goal"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab B: Enrolled Courses List -->
+                <div class="courses-card-inner">
+                    <h3><i class="fa-solid fa-book-open text-teal"></i> Registered Courses</h3>
+                    <div class="courses-grid" id="student-courses-grid">
+                        <!-- Dynamically inserted course cards -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Actions -->
+            <div class="dashboard-footer-actions">
+                <button class="btn btn-secondary btn-logout" id="btn-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-circle-info" id="toast-icon"></i>
+        <span id="toast-message">Message details</span>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="app.js"></script>
+</body>
+</html>
