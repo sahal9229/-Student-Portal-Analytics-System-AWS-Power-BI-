@@ -12,7 +12,7 @@ A complete **serverless cloud application** built using **AWS** and **Microsoft 
 ## Live Demo
 
 🌐 Frontend:
-[(https://studentportal-frontend-sahal.s3.ap-south-1.amazonaws.com/index.html)]
+[https://studentportal-frontend-sahal.s3.ap-south-1.amazonaws.com/index.html]
 
 📊 Dashboard:
 Power BI Desktop (.pbix included)
