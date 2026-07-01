@@ -1,4 +1,13 @@
-# 🎓 Student Portal Analytics System
+# 🎓 Student Portal Analytics System using AWS & Power BI
+
+## 📖 Overview
+
+The **Student Portal Analytics System** is a serverless cloud application built using **Amazon Web Services (AWS)** and **Microsoft Power BI**. It allows students to register, log in, and enroll in courses through a web-based portal.
+
+Student data is stored in **Amazon DynamoDB** using **AWS Lambda** and **API Gateway**. A scheduled **EventBridge** rule automatically triggers a Lambda function every five hours to export the latest student data as a CSV file to **Amazon S3**. The exported data is then used in **Power BI** to create interactive dashboards and analytics.
+
+This project demonstrates a complete serverless architecture, automated data pipeline, cloud storage, and business intelligence reporting using AWS services.
+
 
 A complete **serverless cloud application** built using **AWS** and **Microsoft Power BI**.
 
@@ -18,15 +27,6 @@ A complete **serverless cloud application** built using **AWS** and **Microsoft 
 Power BI Desktop (.pbix included)
 
 ---
-# 🎓 Student Portal Analytics System using AWS & Power BI
-
-## 📖 Overview
-
-The **Student Portal Analytics System** is a serverless cloud application built using **Amazon Web Services (AWS)** and **Microsoft Power BI**. It allows students to register, log in, and enroll in courses through a web-based portal.
-
-Student data is stored in **Amazon DynamoDB** using **AWS Lambda** and **API Gateway**. A scheduled **EventBridge** rule automatically triggers a Lambda function every five hours to export the latest student data as a CSV file to **Amazon S3**. The exported data is then used in **Power BI** to create interactive dashboards and analytics.
-
-This project demonstrates a complete serverless architecture, automated data pipeline, cloud storage, and business intelligence reporting using AWS services.
 
 ---
 
